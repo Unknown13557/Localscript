@@ -4385,7 +4385,7 @@ PlayerESP.Pill.MouseButton1Click:Connect(function()
     setToggle(not PlayerESP.State)    
 end)    
     
-setToggle(false)   
+setToggle(true)   
     
 _G.StopESPPlayerLoop = function()    
     if espLoopConn then    
