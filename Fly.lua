@@ -1340,7 +1340,7 @@ Instance.new("UICorner",yTeleportBox).CornerRadius = UDim.new(0,6)
 spTeleportBox = Instance.new("TextBox")
 spTeleportBox.Parent = rowTeleportY
 spTeleportBox.Size = UDim2.fromOffset(97,28)
-spTeleportBox.Text = "450"
+spTeleportBox.Text = "400"
 spTeleportBox.PlaceholderText = "Speed"
 spTeleportBox.ClearTextOnFocus = false
 spTeleportBox.Font = Enum.Font.SourceSansBold
@@ -5347,6 +5347,7 @@ Instance.new("UICorner",tpBtn).CornerRadius = UDim.new(0,6)
 local SCAN_DELAY = 1/30
 local MARKER_DELAY = 0.5
 local MAX_MARKERS = 5
+local range = 2000
 
 local scanTick = 0
 local markerTick = 0
