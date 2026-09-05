@@ -1101,7 +1101,7 @@ for i = 1, flySpeed do
 		local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 		while tpwalking and (myGen == tpGen) and hb:Wait() and chr and hum and hum.Parent do
 			if hum.MoveDirection.Magnitude > 0 then
-				chr:TranslateBy(hum.MoveDirection * 1.5)
+				chr:TranslateBy(hum.MoveDirection * 1.2)
 			end
 		end
 	end)
@@ -1253,7 +1253,7 @@ plus.MouseButton1Down:Connect(function()
 			local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 			while tpwalking and (myGen == tpGen) and hb:Wait() and chr and hum and hum.Parent do
 				if hum.MoveDirection.Magnitude > 0 then
-					chr:TranslateBy(hum.MoveDirection*1.5)
+					chr:TranslateBy(hum.MoveDirection*1.2)
 				end
 			end
 		end)
@@ -1286,7 +1286,7 @@ mine.MouseButton1Down:Connect(function()
 			local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 			while tpwalking and (myGen == tpGen) and hb:Wait() and chr and hum and hum.Parent do
 				if hum.MoveDirection.Magnitude > 0 then
-					chr:TranslateBy(hum.MoveDirection*1.5)
+					chr:TranslateBy(hum.MoveDirection*1.2)
 				end
 			end
 		end)
@@ -1340,7 +1340,7 @@ Instance.new("UICorner",yTeleportBox).CornerRadius = UDim.new(0,6)
 spTeleportBox = Instance.new("TextBox")
 spTeleportBox.Parent = rowTeleportY
 spTeleportBox.Size = UDim2.fromOffset(97,28)
-spTeleportBox.Text = "300"
+spTeleportBox.Text = "205"
 spTeleportBox.PlaceholderText = "Speed"
 spTeleportBox.ClearTextOnFocus = false
 spTeleportBox.Font = Enum.Font.SourceSansBold
@@ -2252,7 +2252,7 @@ if lastVector then
         speedLocalInformationLabel.Text =
             "Speed: "..math.floor(speed).." studs/s"
 
-        if speed >= 450 then
+        if speed >= 350 then
             speedLocalInformationLabel.TextColor3 =
                 Color3.fromRGB(255,0,0)
         else
@@ -2379,7 +2379,7 @@ SpeedForce.Label.Text = "Speed"
 SpeedForce.Frame.ClipsDescendants = true
 
 local accel = 1
-local speedValue = 300
+local speedValue = 210
 
 local rowSpeedForce = Instance.new("Frame")
 rowSpeedForce.Parent = SpeedForce.Frame
@@ -2804,7 +2804,7 @@ layoutTeleportPlayer.Padding = UDim.new(0,1)
 local teleportSpeedBox = Instance.new("TextBox")
 teleportSpeedBox.Parent = rowTeleportPlayer
 teleportSpeedBox.Size = UDim2.fromOffset(40,28)
-teleportSpeedBox.Text = "350"
+teleportSpeedBox.Text = "200"
 teleportSpeedBox.PlaceholderText = "Speed"
 teleportSpeedBox.ClearTextOnFocus = false
 teleportSpeedBox.Font = Enum.Font.SourceSansBold
