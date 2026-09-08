@@ -2819,7 +2819,7 @@ Instance.new("UICorner",teleportSpeedBox).CornerRadius = UDim.new(0,6)
 local MIN_TELEPORT_PLAYER_SPEED = 1
 local MAX_TELEPORT_PLAYER_SPEED = 10000
 
-local teleportSpeed = 350
+local teleportSpeed = 200
 
 teleportSpeedBox:GetPropertyChangedSignal("Text"):Connect(function()
 
