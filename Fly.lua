@@ -22,7 +22,7 @@ local selectedPlayer = nil
 local teleportMoveConn = nil
 local teleportActive = false
 
-local flySpeed = 4
+local flySpeed = 3
 local speaker = LocalPlayer
 
 local TELEPORT_RATE = 30
@@ -263,7 +263,7 @@ speed.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
 speed.Position = UDim2.new(0.474, 0, 0.50500074, 0)
 speed.Size = UDim2.new(0, 44, 0, 28)
 speed.Font = Enum.Font.SourceSans
-speed.Text = "4"
+speed.Text = "3"
 speed.TextColor3 = Color3.fromRGB(0, 0, 0)
 speed.TextScaled = true
 speed.TextSize = 14
@@ -1101,7 +1101,7 @@ for i = 1, flySpeed do
 		local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 		while tpwalking and (myGen == tpGen) and hb:Wait() and chr and hum and hum.Parent do
 			if hum.MoveDirection.Magnitude > 0 then
-				chr:TranslateBy(hum.MoveDirection * 1.2)
+				chr:TranslateBy(hum.MoveDirection * 1.1)							
 			end
 		end
 	end)
@@ -1253,7 +1253,7 @@ plus.MouseButton1Down:Connect(function()
 			local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 			while tpwalking and (myGen == tpGen) and hb:Wait() and chr and hum and hum.Parent do
 				if hum.MoveDirection.Magnitude > 0 then
-					chr:TranslateBy(hum.MoveDirection*1.2)
+					chr:TranslateBy(hum.MoveDirection*1.1)
 				end
 			end
 		end)
@@ -1286,7 +1286,7 @@ mine.MouseButton1Down:Connect(function()
 			local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 			while tpwalking and (myGen == tpGen) and hb:Wait() and chr and hum and hum.Parent do
 				if hum.MoveDirection.Magnitude > 0 then
-					chr:TranslateBy(hum.MoveDirection*1.2)
+					chr:TranslateBy(hum.MoveDirection*1.1)
 				end
 			end
 		end)
@@ -1340,7 +1340,7 @@ Instance.new("UICorner",yTeleportBox).CornerRadius = UDim.new(0,6)
 spTeleportBox = Instance.new("TextBox")
 spTeleportBox.Parent = rowTeleportY
 spTeleportBox.Size = UDim2.fromOffset(97,28)
-spTeleportBox.Text = "205"
+spTeleportBox.Text = "200"
 spTeleportBox.PlaceholderText = "Speed"
 spTeleportBox.ClearTextOnFocus = false
 spTeleportBox.Font = Enum.Font.SourceSansBold
