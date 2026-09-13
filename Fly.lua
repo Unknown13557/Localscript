@@ -795,7 +795,7 @@ end
 
 
 local lastApplyTime = 0
-local APPLY_INTERVAL = 1/30
+local APPLY_INTERVAL = 1/60
 
 local noclipUsers = 0
 
