@@ -5783,21 +5783,27 @@ local function applyHitbox(player, localHRP)
 
 	end
 
-	local radius = math.max(distance - 900, 0)
-   local diameter = radius * 2
+	-- Đổi thành hình vuông (Block)
+	hrp.Shape = Enum.PartType.Block
 
-   local desired = Vector3.new(
-        diameter,
-        diameter,
-        diameter
-   )
+	-- Tính kích thước sao cho rìa cách nhân vật đúng 900 studs
+	-- Bán kính từ tâm mục tiêu đến rìa chạm tới nhân vật là 'distance', 
+	-- cộng thêm 900 studs khoảng trống ra bên ngoài, sau đó nhân đôi để ra tổng Size của hình vuông.
+	local radius = distance + 900
+	local diameter = radius * 2
 
-        hrp.Shape = Enum.PartType.Ball
-        hrp.Size = desired
-        hrp.Material = Enum.Material.Neon
-        hrp.Transparency = 0.5
+	local desired = Vector3.new(
+		diameter,
+		diameter,
+		diameter
+	)
 
-   end
+	hrp.Size = desired
+	hrp.Material = Enum.Material.Neon
+	hrp.Transparency = 0.5 -- Độ đục / trong suốt
+
+		end
+		
 
 local function fullRestore()
 
